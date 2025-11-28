@@ -1,0 +1,41 @@
+EXTENSION LIST
+
+1. Python Extension Pack : ext install donjayamanne.python-extension-pack
+2. Better Comments : ext install aaron-bond.better-comments
+3. Ruff : ext install charliermarsh.ruff
+4. Material Icon Theme : ext install PKief.material-icon-theme
+5. Gruvbox Theme : ext install jdinhlife.gruvbox
+
+
+
+
+SOME INSTRUCTIONS:
+  
+Styling VS Code
+
+Change Themes: Settings → Themes
+Color Theme → Gruvbox hard
+File Icon Theme → Material Icon Theme
+Customize Icons: Opens Settings → Cmd/Ctrl + Shift + P → Open User Settings (JSON)
+Browse the list of options here: Material Folder Icons
+  "material-icon-theme.folders.associations": {
+    "venv": "environment",
+    "references": "docs",
+    "modeling": "generator"
+  },
+ 
+Auto Formatting
+Settings → Format on Save
+Settings→ Default Formatter → Ruff
+"[python]": {
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "charliermarsh.ruff"
+},
+
+Interactive Jupyter
+Interactive Python: Search for Jupyter Interactive Window → Enable (When pressing shift + enter, send selection to Jupyter interactive window as opposed to the Python terminal)
+Root: Regarding changing the root folder for Jupyter notebooks, you can modify your settings in VS Code by including the JSON snippet below:
+"settings": {
+		"jupyter.notebookFileRoot": "${workspaceFolder}/app",
+	}
+
